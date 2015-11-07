@@ -1,0 +1,10 @@
+﻿<xapCache source="D:\HackTM2015\WindowsPhone\CloudDemo\Bin\Debug\CloudDemo_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="07-Nov-15 7:28:53 PM">
+  <file source="D:\HackTM2015\WindowsPhone\CloudDemo\obj\Debug\CloudDemo.dll" archivePath="CloudDemo.dll" lastWriteTime="07-Nov-15 7:28:52 PM" />
+  <file source="D:\HackTM2015\WindowsPhone\CloudDemo\SampleImage.jpg" archivePath="SampleImage.jpg" lastWriteTime="11-Jul-14 12:17:54 PM" />
+  <file source="D:\HackTM2015\WindowsPhone\CloudDemo\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="11-Jul-14 12:17:54 PM" />
+  <file source="D:\HackTM2015\WindowsPhone\CloudDemo\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="07-Nov-15 6:51:28 PM" />
+  <file source="D:\HackTM2015\WindowsPhone\CloudDemo\Bin\Debug\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="11-Jul-14 12:17:54 PM" />
+  <file source="D:\HackTM2015\WindowsPhone\CloudDemo\Bin\Debug\Background.png" archivePath="Background.png" lastWriteTime="11-Jul-14 12:17:54 PM" />
+  <file source="D:\HackTM2015\WindowsPhone\Abbyy.CloudOcrSdk\Bin\Debug\Abbyy.CloudOcrSdk.dll" archivePath="Abbyy.CloudOcrSdk.dll" lastWriteTime="07-Nov-15 6:50:44 PM" />
+  <file source="D:\HackTM2015\WindowsPhone\CloudDemo\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="07-Nov-15 6:51:29 PM" />
+</xapCache>

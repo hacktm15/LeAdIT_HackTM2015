@@ -1,0 +1,4 @@
+D:\HackTM2015\WindowsPhone\Abbyy.CloudOcrSdk\Bin\Debug\Abbyy.CloudOcrSdk.dll
+D:\HackTM2015\WindowsPhone\Abbyy.CloudOcrSdk\Bin\Debug\Abbyy.CloudOcrSdk.pdb
+D:\HackTM2015\WindowsPhone\Abbyy.CloudOcrSdk\obj\Debug\Abbyy.CloudOcrSdk.dll
+D:\HackTM2015\WindowsPhone\Abbyy.CloudOcrSdk\obj\Debug\Abbyy.CloudOcrSdk.pdb

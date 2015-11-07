@@ -1,0 +1,17 @@
+D:\HackTM2015\WindowsPhone\CloudDemo\obj\Debug\CloudDemo.csprojResolveAssemblyReference.cache
+D:\HackTM2015\WindowsPhone\CloudDemo\obj\Debug\App.g.cs
+D:\HackTM2015\WindowsPhone\CloudDemo\obj\Debug\MainPage.g.cs
+D:\HackTM2015\WindowsPhone\CloudDemo\obj\Debug\ProcessingPage.g.cs
+D:\HackTM2015\WindowsPhone\CloudDemo\obj\Debug\CloudDemo.g.resources
+D:\HackTM2015\WindowsPhone\CloudDemo\Bin\Debug\ApplicationIcon.png
+D:\HackTM2015\WindowsPhone\CloudDemo\Bin\Debug\Background.png
+D:\HackTM2015\WindowsPhone\CloudDemo\Bin\Debug\CloudDemo.dll
+D:\HackTM2015\WindowsPhone\CloudDemo\Bin\Debug\CloudDemo.pdb
+D:\HackTM2015\WindowsPhone\CloudDemo\Bin\Debug\AppManifest.xaml
+D:\HackTM2015\WindowsPhone\CloudDemo\Bin\Debug\Properties\WMAppManifest.xml
+D:\HackTM2015\WindowsPhone\CloudDemo\Bin\Debug\CloudDemo_Debug_AnyCPU.xap
+D:\HackTM2015\WindowsPhone\CloudDemo\Bin\Debug\Abbyy.CloudOcrSdk.dll
+D:\HackTM2015\WindowsPhone\CloudDemo\Bin\Debug\Abbyy.CloudOcrSdk.pdb
+D:\HackTM2015\WindowsPhone\CloudDemo\obj\Debug\CloudDemo.dll
+D:\HackTM2015\WindowsPhone\CloudDemo\obj\Debug\CloudDemo.pdb
+D:\HackTM2015\WindowsPhone\CloudDemo\obj\Debug\XapCacheFile.xml
