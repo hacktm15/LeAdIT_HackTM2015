@@ -178,7 +178,7 @@ namespace CloudDemo
                     date = dateMatcher.Groups[1].Captures[0].ToString();
                     total = totalMatcher.Groups[1].Captures[0].ToString();
                     displayMessage("În data de " + date + " aveți un bon în valoare de " + total + ".");
-                }
+                } 
                 else {
                     displayMessage("Nu s-au putut extrage informațiile utile. Vă rugăm să reîncercați.");
                 }

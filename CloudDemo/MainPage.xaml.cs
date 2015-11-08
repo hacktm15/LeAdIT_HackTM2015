@@ -30,7 +30,7 @@ namespace CloudDemo
             photoChooserTask = new PhotoChooserTask();
             photoChooserTask.Completed += new EventHandler<PhotoResult>(cameraCaptureTask_Completed);
 
-        }
+        } 
 
         private void fromCamera_Click(object sender, RoutedEventArgs e)
         {
