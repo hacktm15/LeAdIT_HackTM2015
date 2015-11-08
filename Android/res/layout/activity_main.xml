@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/LinearLayout1"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="top|center_vertical"
+              android:orientation="vertical" android:weightSum="1">
+
+    <TextView
+            android:layout_width = "373dp"
+            android:layout_height = "78dp"
+            android:gravity="center"
+            android:text="Selectați imaginea"
+            android:textSize="38dp"
+            android:id="@+id/infoSelect" android:textAlignment="center"/>
+
+    <Button
+            android:id="@+id/fromCameraButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="captureImageFromCamera"
+            android:text="@string/fromCamera"
+    />
+
+    <Button
+            android:id="@+id/fromFileButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="captureImageFromSdCard"
+            android:text="@string/fromFile"/>
+
+</LinearLayout>

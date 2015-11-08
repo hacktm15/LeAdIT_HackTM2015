@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">Loteria Fiscală</string>
+    <string name="menu_settings">Setări</string>
+    <string name="title_activity_main">Loteria Fiscală</string>
+    <string name="fromCamera">Faceți o poză</string>
+    <string name="fromFile">Alegeți o poză</string>
+    <string name="title_activity_results">Rezultate</string>
+    <string name="hello">hello</string>
+    <string name="results">Rezultate</string>
+</resources>
