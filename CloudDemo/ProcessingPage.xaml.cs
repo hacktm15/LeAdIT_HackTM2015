@@ -26,6 +26,17 @@ namespace CloudDemo
         private const String USER = "ReceiptsReader";
         private const String PASS = "xMyC+Mqa3qBJ3p2zwGOQ/PbG";
 
+        private const String winningDate = "16/10";
+        private const String anotherWinningDate = "16-10";
+        private const String winningTotal = "274";
+
+        private ReceiptsJSON receiptsJSON = new ReceiptsJSON();
+        private ResultWriter resultWriter = new ResultWriter();
+        private ResultReader resultReader = new ResultReader();
+
+        private Regex dateRegex = new Regex(".+(\\d{2}/\\d{2}/2\\d{3}|\\d{2}-\\d{2}-2\\d{3}).+");
+        private Regex totalRegex = new Regex(@".TOTAL\s+(\d+,?\d+|\d+\.?\d+).");
+
         public ProcessingPage()
         {
 
@@ -160,14 +171,13 @@ namespace CloudDemo
         /**
         *
         */
-        private void parseReceipts(string text) {
+        private async void parseReceipts(string text)
+        {
 
             try
             {
-                Regex dateRegex = new Regex(".+(\\d{2}/\\d{2}/2\\d{3}|\\d{2}-\\d{2}-2\\d{3}).+");
-                Match dateMatcher = dateRegex.Match(text);
 
-                Regex totalRegex = new Regex(@".TOTAL\s+(\d+,?\d+|\d+\.?\d+).");
+                Match dateMatcher = dateRegex.Match(text);
                 Match totalMatcher = totalRegex.Match(text);
 
                 String date = "", total;
@@ -178,14 +188,60 @@ namespace CloudDemo
                     date = dateMatcher.Groups[1].Captures[0].ToString();
                     total = totalMatcher.Groups[1].Captures[0].ToString();
                     displayMessage("În data de " + date + " aveți un bon în valoare de " + total + ".");
-                } 
-                else {
+                    receiptsJSON.receipts.Add(new Receipt(date, total));
+                    await resultWriter.WriteDataToFileAsync("result.txt", receiptsJSON.receipts.ToArray().ToString());
+                }
+                else
+                {
                     displayMessage("Nu s-au putut extrage informațiile utile. Vă rugăm să reîncercați.");
                 }
             }
-            catch (Exception e) {
+            catch (Exception e)
+            {
 
             }
+
+        
         }
+
+        private bool isTotalWinning(string total)
+        {
+            int winIntegerPart = Int32.Parse(winningTotal);
+            int givenTotalPart = Int32.Parse(total);
+
+            if (winIntegerPart == givenTotalPart)
+            {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        private bool isWinningDate(string date)
+        {
+            Regex givenDateRegex = new Regex(".+(\\d{2}/\\d{2}/2\\d{3}|\\d{2}-\\d{2})-2\\d{3}.+");
+            Match givenDateMatcher = givenDateRegex.Match(date);
+
+            String givenWinningDate = "";
+
+            if ((givenDateMatcher != null) && (givenDateMatcher.Success))
+            {
+
+                givenWinningDate = givenDateMatcher.Groups[1].Captures[0].ToString();
+
+               
+            }
+
+            if (givenWinningDate != "" && (givenWinningDate.Equals(winningDate) || givenWinningDate.Equals(anotherWinningDate)))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }

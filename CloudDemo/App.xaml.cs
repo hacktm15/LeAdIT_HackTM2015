@@ -63,7 +63,7 @@ namespace CloudDemo
 #if DEBUG
             if (Microsoft.Devices.Environment.DeviceType == Microsoft.Devices.DeviceType.Emulator)
             {
-                addTestImageToEmulator();
+               // addTestImageToEmulator();
             }
 #endif
         }

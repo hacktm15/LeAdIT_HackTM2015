@@ -108,6 +108,10 @@
       <DependentUpon>ProcessingPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receipt.cs" />
+    <Compile Include="ReceiptsJSON.cs" />
+    <Compile Include="ResultReader.cs" />
+    <Compile Include="ResultWriter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
