@@ -22,14 +22,14 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="ABBYY Cloud OCR SDK Demo" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="select image" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="ApplicationTitle" Text="Loteria Fiscală" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="Selectați imaginea" Margin="9,-7,0,0" FontSize="55" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <StackPanel x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button x:Name="fromCamera" Click="fromCamera_Click">From camera</Button>
-            <Button x:Name="fromFile" Click="fromFile_Click">From file</Button>
+            <Button x:Name="fromCamera" Click="fromCamera_Click">Faceți o poză</Button>
+            <Button x:Name="fromFile" Click="fromFile_Click">Alegeți o poză</Button>
         </StackPanel>
     </Grid>
  

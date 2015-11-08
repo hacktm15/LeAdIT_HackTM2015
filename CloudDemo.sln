@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudDemo", "CloudDemo\CloudDemo.csproj", "{F1C573AF-2E21-4990-B944-941334BB8754}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loteria Fiscală", "CloudDemo\Loteria Fiscală.csproj", "{F1C573AF-2E21-4990-B944-941334BB8754}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abbyy.CloudOcrSdk", "Abbyy.CloudOcrSdk\Abbyy.CloudOcrSdk.csproj", "{BE083030-14CD-407A-ACA4-A0F5217AD8C0}"
 EndProject

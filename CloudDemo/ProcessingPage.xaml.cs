@@ -13,6 +13,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using System.Text.RegularExpressions;
 
 using Abbyy.CloudOcrSdk;
 
@@ -22,8 +23,12 @@ namespace CloudDemo
     {
         RestServiceClientAsync abbyyClient;
 
+        private const String USER = "ReceiptsReader";
+        private const String PASS = "xMyC+Mqa3qBJ3p2zwGOQ/PbG";
+
         public ProcessingPage()
         {
+
             InitializeComponent();
 
             RestServiceClient syncClient = new RestServiceClient();
@@ -34,9 +39,9 @@ namespace CloudDemo
             // http://ocrsdk.com/documentation/faq/#faq3
 
 			// Name of application you created
-            syncClient.ApplicationId = "ReceiptsReader";
+            syncClient.ApplicationId = USER;
 			// Password should be sent to your e-mail after application was created
-            syncClient.Password = "xMyC+Mqa3qBJ3p2zwGOQ/PbG";
+            syncClient.Password = PASS;
 
             abbyyClient = new RestServiceClientAsync(syncClient);
 
@@ -47,6 +52,7 @@ namespace CloudDemo
 
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
+
             Stream imageStream = AppData.Instance.Image;
             if (imageStream == null)
                 return;
@@ -55,10 +61,10 @@ namespace CloudDemo
             saveImageToFile(imageStream, localPath);
 
             ProcessingSettings settings = new ProcessingSettings();
-            settings.SetLanguage("English,Russian");
+            settings.SetLanguage("English,Romanian");
             settings.OutputFormat = OutputFormat.txt;
 
-            displayMessage("Uploading..");
+           // displayMessage("Uploading..");
             abbyyClient.ProcessImageAsync(localPath, settings, settings);
         }
 
@@ -85,7 +91,7 @@ namespace CloudDemo
         {
             Dispatcher.BeginInvoke(() =>
            {
-               displayMessage("Upload completed. Processing..");
+              // displayMessage("Upload completed. Processing..");
            }
            );
         }
@@ -96,7 +102,7 @@ namespace CloudDemo
             {
                 Dispatcher.BeginInvoke(() =>
                 {
-                    displayMessage("Processing error: " + e.Error.Message);
+                    displayMessage("Eroare la procesare: " + e.Error.Message);
                 }
                 );
                 return;
@@ -104,7 +110,7 @@ namespace CloudDemo
 
             Dispatcher.BeginInvoke(() =>
                 {
-                    displayMessage("Processing completed. Downloading..");
+                    //displayMessage("Processing completed. Downloading..");
                 }
                 );
 
@@ -119,11 +125,11 @@ namespace CloudDemo
             string message = "";
             if (e.Error != null)
             {
-                message = "Error downloading: " + e.Error.Message;
+                message = "S-a produs o eroare de conexiune." + e.Error.Message;
             }
             else
             {
-                message = "Downloaded.\nResult:";
+                message = "Rezultate:";
 
                 string txtFilePath = e.UserState as string;
                 IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForApplication();
@@ -136,7 +142,8 @@ namespace CloudDemo
 
             Dispatcher.BeginInvoke(() =>
             {
-                displayMessage(message);
+                parseReceipts(message);
+                //displayMessage(message);
             }
             );
         }
@@ -148,6 +155,37 @@ namespace CloudDemo
             block.Text = text;
 
             ContentPanel.Children.Add(block);
+        }
+
+        /**
+        *
+        */
+        private void parseReceipts(string text) {
+
+            try
+            {
+                Regex dateRegex = new Regex(".+(\\d{2}/\\d{2}/2\\d{3}|\\d{2}-\\d{2}-2\\d{3}).+");
+                Match dateMatcher = dateRegex.Match(text);
+
+                Regex totalRegex = new Regex(@".TOTAL\s+(\d+,?\d+|\d+\.?\d+).");
+                Match totalMatcher = totalRegex.Match(text);
+
+                String date = "", total;
+
+                if ((dateMatcher != null && totalMatcher != null) && (dateMatcher.Success && totalMatcher.Success))
+                {
+
+                    date = dateMatcher.Groups[1].Captures[0].ToString();
+                    total = totalMatcher.Groups[1].Captures[0].ToString();
+                    displayMessage("În data de " + date + " aveți un bon în valoare de " + total + ".");
+                }
+                else {
+                    displayMessage("Nu s-au putut extrage informațiile utile. Vă rugăm să reîncercați.");
+                }
+            }
+            catch (Exception e) {
+
+            }
         }
     }
 }

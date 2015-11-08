@@ -1,22 +1,5 @@
-This folder contains demo sample for Windows Phone
-
-The sample project requires Windows Phone SDK installed before the project can
-be opened with Visual Studio. Windows Phone SDK can be downloaded from
-http://dev.windowsphone.com/en-us/downloadsdk
-
-!!! IMPORTANT !!!
-
-== Access credentials == 
-
-Please modify CloudDemo\ProcessingPage.xaml.cs before running the program
-
-You need to provide your credentials to connect to Cloud OCR SDK. 
-See ProcessingPage() constructor
-
-== Recognition language ==
-
-The sample is pre-configured to recognize English and Russian texts. If you
-recognize text in other language, you need to change the behaviour using 
-ProcessingSettings.SetLanguage() method.
-See CloudDemo\ProcessingPage.xaml.cs\PhoneApplicationPage_Loaded()
-
+Aplicatia noastra are rolul de a usura viata participantilor la loteria bonurilor. 
+Tot ce trebuie sa faci ca si utilizator este sa faci o poza la un bon fiscal sau sa selectezi o poza facuta unui bon fiscal
+si aplicatia noastra va extrage informatiile de pe bonul dat.
+Aplicatia va notifica utilizatorul cand a fost ultima extragere si ce suma a fost desemnata.
+De asemenea ii va spune utilizatorului daca are bonuri castigatoare pe luna respectiva.

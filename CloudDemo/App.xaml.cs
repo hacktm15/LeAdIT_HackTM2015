@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Microsoft.Xna.Framework.Media;
+using System.Text.RegularExpressions;
 
 namespace CloudDemo
 {
@@ -71,6 +72,7 @@ namespace CloudDemo
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+
         }
 
         // Code to execute when the application is activated (brought to foreground)

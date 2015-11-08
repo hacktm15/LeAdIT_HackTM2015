@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="" />
-  <App xmlns="" ProductID="{6f6c8b71-db8d-4924-87a5-d20ee4b4669a}" Title="CloudDemo" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="CloudDemo author" Description="Sample description" Publisher="CloudDemo" PublisherID="{575d7a70-fd43-4009-bf95-a12d012ad4bd}">
+  <App xmlns="" ProductID="{6f6c8b71-db8d-4924-87a5-d20ee4b4669a}" Title="Loteria Fiscală" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="CloudDemo author" Description="Sample description" Publisher="CloudDemo" PublisherID="{575d7a70-fd43-4009-bf95-a12d012ad4bd}">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_GAMERSERVICES" />
@@ -30,7 +30,7 @@
           <SmallImageURI IsResource="false" IsRelative="true">Background.png</SmallImageURI>
           <Count>0</Count>
           <BackgroundImageURI IsResource="false" IsRelative="true">Background.png</BackgroundImageURI>
-          <Title>CloudDemo</Title>
+          <Title>Loteria Fiscală</Title>
           <BackContent></BackContent>
           <BackBackgroundImageURI></BackBackgroundImageURI>
           <BackTitle></BackTitle>
